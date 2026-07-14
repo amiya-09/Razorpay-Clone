@@ -2,10 +2,7 @@ package com.springboot.razorpay.merchant.entity;
 
 import com.springboot.razorpay.common.enums.UserRole;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import java.util.UUID;
 
@@ -15,6 +12,7 @@ import java.util.UUID;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
+@Builder
 public class AppUser {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
@@ -33,4 +31,5 @@ public class AppUser {
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
     private UserRole role;
+
 }
